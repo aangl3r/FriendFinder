@@ -7,4 +7,5 @@ The answers provided by each user are stored in the database for future recall.
 This app utlizies JavaScript, jQuery, Bootstrap, HTML, CSS, node.js, express.js, and path.js
 
 A link to the Heroku-deployed app can be found below
-[]
+
+[Take the survey on Heroku!](https://fathomless-springs-91674.herokuapp.com/)
