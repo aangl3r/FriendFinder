@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Westeros Friend Finder!</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="/style.css">
+</head>
+<body>
+	<div class="container content">
+		<h1>SURVEY OF THRONES</h1>
+        <p>Answer the questions below to find your best friend from Game of Thrones</p>
+        <p>An answer of 1 means you strongly disagree while an answer of 5 means you strongly agree.</p>
+        <p>Answer all 10 questions to find your perfect match!</p>
+        <p>Your information will be stored for other friends to find you.</p>
+		<form>
+			<div class="form-group">
+				<input id="name" type="text" class="form-control" placeholder="Name (Required)">
+			</div>
+			<div class="form-group">
+				<input id="photo" type="text" class="form-control" placeholder="Link to Profile Photo (Required)">
+			</div>
+			<div class="form-group">
+				<label for="question1">I enjoy swordplay.</label>
+				<select class="form-control" id="question1">
+					<option value="empty"></option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+				</select>
+			</div>
+			<div class="form-group">
+				<label for="question2">I want to rule the seven kingdoms.</label>
+				<select class="form-control" id="question2">
+					<option value="empty"></option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+				</select>
+			</div>
+			<div class="form-group">
+				<label for="question3">I like to stay active and enjoy outdoors.</label>
+				<select class="form-control" id="question3">
+					<option value="empty"></option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+				</select>
+			</div>
+			<div class="form-group">
+				<label for="question4">People constantly underestimate me.</label>
+				<select class="form-control" id="question4">
+					<option value="empty"></option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+				</select>
+			</div>
+			<div class="form-group">
+				<label for="question5">I am loyal to my friends.</label>
+				<select class="form-control" id="question5">
+					<option value="empty"></option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+				</select>
+			</div>
+			<div class="form-group">
+				<label for="question6">I am impulsive.</label>
+				<select class="form-control" id="question6">
+					<option value="empty"></option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+				</select>
+			</div>
+			<div class="form-group">
+				<label for="question7">I love my pets with all my heart.</label>
+				<select class="form-control" id="question7">
+					<option value="empty"></option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+				</select>
+			</div>
+			<div class="form-group">
+				<label for="question8">Doing the right thing is more important than doing what feels good.</label>
+				<select class="form-control" id="question8">
+					<option value="empty"></option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+				</select>
+			</div>
+			<div class="form-group">
+				<label for="question9">I am stubborn.</label>
+				<select class="form-control" id="question9">
+					<option value="empty"></option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+				</select>
+			</div>
+			<div class="form-group">
+				<label for="question10">I have had many lovers.</label>
+				<select class="form-control" id="question10">
+					<option value="empty"></option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+				</select>
+			</div>
+		</form>
+		<div class="text-center">
+			<button id="submitBtn" type="submit" class="btn btn-success btn-lg">Submit</button>
+		</div>
+		
+		<div id="bestFriendModal" class="modal fade" role="dialog">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h3 class="modal-title">Your match!</h1>
+					</div>
+					<div class="modal-body">
+						<h2 id="bestFriend"></h2>
+						<img id="bestFriendPhoto" src="#">
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<footer>
+		<div class="container">
+			<a href="/api/friends">Friends in the Seven Kingdoms API</a>
+			<span>|</span>
+			<a href="https://github.com/aangl3r/FriendFinder">GitHub Repo</a>
+		</div>
+	</footer>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>
+
+<script type="text/javascript">
+	$("#submitBtn").on("click", function(event) {
+		event.preventDefault();
+		
+		var valid = true;
+		if($("#name").val() === "" || $("#photo").val() === "") {
+			valid = false;
+		} else if($("#question1").val() === "empty" || $("#question2").val() === "empty" || $("#question3").val() === "empty" || $("#question4").val() === "empty" || $("#question5").val() === "empty" || $("#question6").val() === "empty" || $("#question7").val() === "empty" || $("#question8").val() === "empty" || $("#question9").val() === "empty" || $("#question10").val() === "empty") {
+			valid = false;
+		}
+		if(valid === true) {
+			var newUser = {
+				name: $("#name").val().trim(),
+				photo: $("#photo").val().trim(),
+				scores: [
+					$("#question1").val(),
+					$("#question2").val(),
+					$("#question3").val(),
+					$("#question4").val(),
+					$("#question5").val(),
+					$("#question6").val(),
+					$("#question7").val(),
+					$("#question8").val(),
+					$("#question9").val(),
+					$("#question10").val()
+				]
+			};
+			var currentURL = window.location.origin;
+			
+			$.post(currentURL + "/api/friends", newUser, function(data) {
+				$("#bestFriend").text(data.name);
+				$("#bestFriendPhoto").attr("src", data.photo);
+				$("#bestFriendModal").modal("toggle");
+			});
+		} else {
+			
+			alert("Please answer all questions.");
+		}
+	});
+</script>
